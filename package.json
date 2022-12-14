@@ -1,0 +1,12 @@
+{
+  "name": "@battleship/common",
+  "scripts": {
+    "build:dev": "tsc --watch"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  },
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "files": ["./dist"]
+}
