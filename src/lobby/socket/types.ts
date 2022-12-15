@@ -28,6 +28,17 @@ export interface HistoryLog {
 
 export interface JoinLobbyData {
   id: number;
+  player?: PlayerInfo;
+}
+
+export interface JoinLobbyReturn {
+  lobbyId: number;
+  player: PlayerInfo;
+}
+
+export interface PlayerInfo {
+  id: number;
+  socketId: string;
 }
 
 export interface TurnData {}
@@ -59,8 +70,8 @@ export type SocketFireAnswer =
 
 export interface ServerEventGameLog {
   id: number;
-  fromSocketId: string;
-  toSocketId: string;
+  fromPlayer: number;
+  toPlayer: number;
   target: Coordinates;
   result: CellState;
 }
