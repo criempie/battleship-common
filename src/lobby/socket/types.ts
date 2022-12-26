@@ -12,6 +12,8 @@ export interface Coordinates {
   y: number;
 }
 
+export type MinifiedField = (Coordinates & { state: CellState })[];
+
 export interface HistoryLogAction {
   target: Coordinates;
 }
@@ -39,7 +41,7 @@ export interface JoinLobbyReturn {
 export interface PlayerInfo {
   id: string;
   socketId: string;
-  field: CellState[][];
+  field: MinifiedField;
 }
 
 export interface TurnData {}
